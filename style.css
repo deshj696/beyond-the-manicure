@@ -41,6 +41,22 @@ body {
   font-family: var(--sans);
 }
 
+body.rhino-page {
+  cursor: auto;
+}
+
+body.rhino-page .site-header {
+  position: sticky;
+}
+
+body.rhino-page main {
+  width: min(1440px, calc(100% - 44px));
+}
+
+body.rhino-page main::before {
+  content: none;
+}
+
 
 img {
   display: block;
@@ -930,7 +946,48 @@ figcaption {
 .model-button {
   display: inline-block;
   margin-top: 18px;
+  margin-right: 8px;
   background: var(--cyan);
+}
+
+.rhino-main {
+  background: #fff;
+}
+
+.rhino-hero {
+  min-height: auto;
+  padding: clamp(54px, 8vw, 110px) clamp(22px, 4vw, 60px) clamp(24px, 4vw, 42px);
+  border-bottom: 1px solid var(--ink);
+}
+
+.rhino-hero h1 {
+  max-width: 1120px;
+  margin-bottom: 24px;
+}
+
+.render-spread {
+  display: grid;
+  gap: clamp(24px, 5vw, 72px);
+  padding: clamp(30px, 5vw, 72px) clamp(22px, 4vw, 60px);
+  border-bottom: 1px solid var(--ink);
+}
+
+.render-spread figure {
+  margin: 0;
+  border: 1px solid var(--ink);
+  background: #fff;
+  box-shadow: 12px 12px 0 var(--ink);
+}
+
+.render-spread img {
+  display: block;
+  width: 100%;
+}
+
+.render-spread figcaption {
+  padding: 9px 12px;
+  border-top: 1px solid var(--ink);
+  background: var(--acid);
 }
 
 .labor-section {
